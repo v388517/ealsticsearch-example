@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://java.sun.com/JSP/Page">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<form action="toLogin">
+
+    用户名：<input name="username" type="text"/>
+    <br/>
+    密 码：<input name="password" type="password"/><br/>
+    <input type="submit" value="登录"/><br/>
+
+    <h3 th:text="${msg}" style="color: red"></h3>
+
+</form>
+
+</body>
+</html>
