@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery.min.js"></script>
+    <script>
+      function crossDomain() {
+          $.ajax({
+              url:'http://localhost:8083/find.action',
+              type:'get',
+              dataType:'jsonp',
+              success:function(data){
+                  alert(JSON.stringify(data));
+              }
+          })
+      }
+
+
+    </script>
+
+</head>
+<body>
+<a href="#" onclick="crossDomain()">jsonp跨域实现</a>
+</body>
+</html>

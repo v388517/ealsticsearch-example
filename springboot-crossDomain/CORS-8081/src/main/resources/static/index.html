@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>页面一</title>
+    <script src="angular.min.js"></script>
+
+    <script>
+        var app=angular.module("app",[]);
+        app.controller("cordController",function ($scope, $http) {
+            $scope.fun=function (temp) {
+                $http.get("http://localhost:8083/show?temp="+temp).success(function (response) {
+                    alert(response);
+                });
+            }
+        });
+    </script>
+
+</head>
+<body ng-app="app" ng-controller="cordController">
+
+<a href="#" ng-click="fun('angular')">跨域请求</a>
+
+
+</body>
+</html>
